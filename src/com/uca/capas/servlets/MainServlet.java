@@ -42,10 +42,10 @@ public class MainServlet extends HttpServlet {
 		String pass = "camote99"; 
 		// TODO those are my LoL account credentials :V
 		PrintWriter out = response.getWriter();
-		String usuario = request.getParameter("user");
-		String password = request.getParameter("pass");
+
 		
-		if(user.equals(usuario)){
+		if(user.equals(request.getParameter("user")) && 
+				pass.equals(request.getParameter("pass"))){
 			out.println("<html>");
 			out.println("<body>");
 			out.println("<h3>"+"ACCESO CONCEDIDO" + "</h3>");
